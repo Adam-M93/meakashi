@@ -6,7 +6,9 @@ void main()
 	ClearMessage();
 
 	
-	PlayBGM( 1, "msys01", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys01", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys01", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys01", 120, 0 ); }
 	DisableWindow();
 	ModDrawCharacter(2, 1, "sprite/normal/kei2_def1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
@@ -177,7 +179,9 @@ void main()
 	ClearMessage();
 	
 	FadeOutBGM( 1, 300, FALSE );
-	PlayBGM( 0, "Iru", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Iru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　自動ドアをくぐるとエアカーテンの涼しさが迎える。",
@@ -379,7 +383,9 @@ void main()
 	OutputLine(NULL, "　突然、タバコをくわえた太ったおっさんが話に割り込んできた。",
 		   NULL, "A fat man with a cigarette suddenly cut into our conversation.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "msys07", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "msys07", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\msys07", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\msys07", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………大石？！",

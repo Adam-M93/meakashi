@@ -7,8 +7,12 @@ void main()
 	ClearMessage();
 
 	DrawScene("black", 100 );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 	DrawScene("text/nort19", 1000 );
 	Wait( 10000 );
 	DrawScene("black", 3000 );
@@ -169,7 +173,9 @@ void main()
 	FadeOutBGM( 0, 400, FALSE );
 	FadeOutBGM( 2, 400, FALSE );
 	DrawScene("black", 400 );
-	PlayBGM( 1, "msys27", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys27", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys27", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys27", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　最近は、野球の練習日に合わせて「魅音」の時間をもらえるようになっていたので、お姉と打ち合わせることはほとんどなくなっていた。",
@@ -224,8 +230,12 @@ void main()
 	
 	FadeOutBGM( 1, 300, FALSE );
 	DrawSceneWithMask("background/oki_g3", "maskleft", 1, 0, 300 );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　自転車を引っ張り出し、グラウンドを後にしようとした時、…突然声をかけられたのだ。",
@@ -407,8 +417,12 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 0, "Ame", 120, 0 );
-	PlayBGM( 1, "Ame", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Ame", 120, 0 ); }
 	
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　レナの予告通り、途中で私たちはすごい土砂降りに見舞われることになる。",
@@ -526,7 +540,9 @@ void main()
 	ClearMessage();
 	
 	DrawSceneWithMask("background/mob1_01", "maskup", 1, 0, 300 );
-	PlayBGM( 1, "Ame", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Ame", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s06/02/150200010", 128, TRUE);
@@ -674,7 +690,9 @@ void main()
 	ClearMessage();
 	
 	DrawSceneWithMask("background/mob1_01", "maskup", 1, 0, 300 );
-	PlayBGM( 1, "Ame", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Ame", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s06/02/150200022", 128, TRUE);
@@ -854,7 +872,9 @@ void main()
 	SetValidityOfSaving(FALSE);
 	FadeOutBGM( 0, 300, FALSE );
 	Wait( 200 ):
-	PlaySE( 4, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_027", 128, 64 ); }
 	DrawBustshot(6, "scene/002a", -500, 160, -790, FALSE, 0, 0, 0, 0, 0, 0, 0, 26, 50, TRUE );
 	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
@@ -873,8 +893,12 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { ClearMessage(); }
 	
 	DrawScene("background/mob1_01", 400 );
-	PlayBGM( 0, "ame", 120, 0 );
-	PlayBGM( 1, "Ame", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Ame", 120, 0 ); }
 	SetValidityOfInterface(TRUE);
 	SetValidityOfSaving(TRUE);
 	
@@ -902,7 +926,9 @@ void main()
 	OutputLine(NULL, "笑みに……冷酷なものを感じて、少しぞっとした。",
 		   NULL, " She was giving me the creeps.", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "wa_032", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_032", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_032", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_032", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…遠雷の音が聞こえる。",
@@ -1060,7 +1086,9 @@ void main()
 	OutputLine(NULL, "「どうして……そう思う？」",
 		   NULL, "\"Why... do you think that?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlayBGM( 0, "Nazo", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Nazo", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s06/02/150200041", 128, TRUE);
@@ -1221,7 +1249,9 @@ void main()
 	ClearMessage();
 	
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 1, "msys07", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys07", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys07", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys07", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s06/02/150200045", 128, TRUE);
@@ -1254,7 +1284,9 @@ void main()
 		   NULL, "...And got the chills.", Line_Normal);
 	ClearMessage();
 	
-	PlayBGM( 0, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi_r", 120, 0 ); }
 	DrawScene("scene/204b", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1564,7 +1596,9 @@ void main()
 	ClearMessage();
 	
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 2, "kaze", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\kaze", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……………………え……。",
@@ -1939,8 +1973,12 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 2, 300, FALSE );
-	PlayBGM( 0, "ame", 120, 0 );
-	PlayBGM( 2, "ame", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\ame", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……土砂降りは、少しも弱まる気配はない。",
@@ -1986,7 +2024,9 @@ void main()
 	OutputLine(NULL, "　そう言えば…もうすぐじゃないか。",
 		   NULL, "The Watanagashi festival was...", Line_WaitForInput);
 	
-	PlaySE( 4, "wa_022", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_022", 128, 64 ); }
 	FadeOutBGM( 0, 300, FALSE );
 	FadeOutBGM( 1, 300, FALSE );
 	FadeOutBGM( 2, 300, FALSE );
@@ -1996,8 +2036,12 @@ void main()
 	ClearMessage();
 	
 	DisableWindow();
-	PlayBGM( 0, "ame", 120, 0 );
-	PlayBGM( 2, "ame", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\ame", 120, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -2023,7 +2067,9 @@ void main()
 	FadeOutBGM( 0, 400, FALSE );
 	FadeOutBGM( 2, 400, FALSE );
 	DrawScene("black", 400 );
-	PlayBGM( 0, "suzu", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\suzu", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　悟史くんが家出してしまう？",
@@ -2059,7 +2105,9 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 1, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi_r", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…………胸の中を、あまりに具体的になった不安がぐるぐると駆け巡る。",
@@ -2090,7 +2138,9 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 0, "ame", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\ame", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\ame", 120, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );

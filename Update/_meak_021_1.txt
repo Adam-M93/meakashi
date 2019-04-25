@@ -7,8 +7,12 @@ void main()
 	ClearMessage();
 
 	DrawScene("white", 1000 );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 	DrawSceneWithMask("background/sora", "maskm1", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -104,7 +108,9 @@ void main()
 	ClearMessage();
 	DrawScene("white", 1000 );
 	DrawSceneWithMask("background/g1", "maskright", 1, 0, 300 );
-	PlaySE( 0, "wa_001", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_001", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -113,7 +119,9 @@ void main()
 	FadeOutBGM( 2, 300, FALSE );
 	ModDrawCharacter(3, 22, "sprite/normal/tie_2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/gk3", "maskright", 1, 0, 300 );
-	PlayBGM( 0, "Nazo", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Nazo", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　学校では先生から、村長が行方不明である旨の説明があり、何か知っている人はいないかと挙手を求めた。",
@@ -280,12 +288,18 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_001", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_001", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 	ModDrawCharacter(2, 5, "sprite/normal/ri1_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/gr3", "maskup", 1, 0, 300 );
 
@@ -799,10 +813,14 @@ void main()
 	
 	DrawScene("white", 100 );
 	DrawScene("black", 50 );
-	PlaySE( 0, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_005", 128, 64 ); }
 	DrawScene("white", 100 );
 	DrawScene("black", 50 );
-	PlaySE( 0, "wa_003", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_003", 128, 64 ); }
 	DrawSceneWithMask("background/gr3", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1023,7 +1041,9 @@ void main()
 	ClearMessage();
 
 	DrawScene("black", 400 );
-	PlaySE( 0, "wa_001", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_001", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );
@@ -1066,7 +1086,9 @@ void main()
 	
 	FadeOutBGM( 0, 300, FALSE );
 	FadeOutBGM( 2, 300, FALSE );
-	PlayBGM( 1, "msys17", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……公由のおじいちゃん、",
@@ -1235,7 +1257,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_tataku", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_tataku", 128, 64 ); }
 	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 200 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1360,11 +1384,15 @@ void main()
 		   NULL, " his aunt and Satoko.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlaySE( 0, "s_furu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_furu", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_tataku", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_tataku", 128, 64 ); }
 	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 100 );
 
 	SetValidityOfInput( FALSE );
@@ -1692,7 +1720,9 @@ void main()
 	DrawScene("white", 1000 );
 	FadeOutBGM( 1, 1000, FALSE );
 	DrawScene("background/sora2", 3000 );
-	PlayBGM( 0, "higurashi", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\higurashi", 120, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -1752,7 +1782,9 @@ void main()
 	OutputLine(NULL, "……私の居場所がここにない、ここに私は居てはいけないという、…寂しさを感じさせるだけなのだ。",
 		   NULL, " The sound reminded me that I wasn't supposed be here... That I couldn't be here...", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "s_interphone", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_interphone", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その時、…呼び鈴がなった。",
@@ -1774,20 +1806,26 @@ void main()
 	OutputLine(NULL, "　古き良き田舎の台所に、その監視モニターが置いてあるのは、とても異様だった。",
 		   NULL, "Something as modern as a security camera monitor in this old-fashioned kitchen looked rather strange.", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "wa_038", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_038", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_038", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_038", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　モニターのスイッチを入れても画面がつかない。",
 		   NULL, "I turned the switch, but nothing appeared on the monitor.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 0, "s_interphone", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_interphone", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……コンセントとかが抜けてるのかと思い、裏の配線を見ようとするが、ぐちゃぐちゃの束になって冷蔵庫の裏に続いており、さっぱり分からなかった。",
 		   NULL, "I tried to check the plug, but there were a bunch of cords going behind the refrigerator, so I couldn't even do that.", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "s_interphone", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_interphone", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　壊れているのか、私の操作が悪いのか分からないでいる間にも、呼び鈴は何度か鳴らされた。",
@@ -1874,7 +1912,9 @@ void main()
 	OutputLine(NULL, "　相手は名乗らなかったが、その独特の喋り方ですぐにわかった。",
 		   NULL, "She didn't tell me her name, but I recognized her voice.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "higurashi", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\higurashi", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602043", 128, TRUE);
@@ -2028,7 +2068,9 @@ void main()
 		   NULL, " I'll be at the front door.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 0, "s_interphone", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_interphone", 128, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　玄関へ向かおうとすると、もう一度チャイムが鳴った。",
 		   NULL, "As I headed there, I heard the doorbell ring again.", Line_Normal);

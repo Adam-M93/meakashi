@@ -17,7 +17,9 @@ void main()
 	DrawScene("black", 1000 );
 	SetSpeedOfMessage( FALSE, 0 );
 	DrawScene("background/ke_shiryou1_02", 1000 );
-	PlayBGM( 0, "Iru", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Iru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　皆さんは人殺しが、動機によっては許されるなんて、思いますか？",

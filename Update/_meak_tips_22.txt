@@ -8,7 +8,9 @@ void main()
 	ClearMessage();
 
 	DrawScene("background/ke_ky1", 1000 );
-	PlayBGM( 0, "T2", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "T2", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\T2", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\T2", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>刑事</color>", NULL, "<color=#f5e6d3>Detective</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s20/00/tp1_keijia_10001", 128, TRUE);

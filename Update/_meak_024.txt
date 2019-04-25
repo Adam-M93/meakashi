@@ -9,8 +9,12 @@ void main()
 	DrawScene("white", 1000 );
 
 	DrawSceneWithMask("background/heya1", "maskm1", 1, 0, 1300 );
-	PlayBGM( 0, "demo_48khz", 120, 0 );
-	PlaySE( 4, "s_interphone", 128, 64 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "demo_48khz", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\demo_48khz", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\demo_48khz", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\s_interphone", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\s_interphone", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　迎えは、遅かった。",
@@ -146,8 +150,12 @@ void main()
 	FadeOutBGM( 0, 400, FALSE );
 	ModDrawCharacter(1, 1, "sprite/normal/kei1_komaru_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawScene("background/heya1", 400 );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100341", 128, TRUE);
@@ -340,7 +348,9 @@ void main()
 
 	FadeOutBGM( 0, 300, FALSE );
 	FadeOutBGM( 2, 300, FALSE );
-	PlayBGM( 1, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi_r", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私はみるみる追い詰められていく。",
 		   NULL, "She was cornering me.", GetGlobalFlag(GLinemodeSp));
@@ -393,7 +403,9 @@ void main()
 	ModDrawCharacter(1, 1, "sprite/normal/kei1_komaru_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacter(3, 2, "sprite/normal/re1a_komaru_a2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/heya1", "maskup", 1, 0, 300 );
-	PlayBGM( 0, "birth_and_death", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "birth_and_death", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\birth_and_death", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\birth_and_death", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602464", 128, TRUE);
@@ -531,7 +543,9 @@ void main()
 	ModDrawCharacter(1, 1, "sprite/normal/kei1_ikari1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacter(3, 2, "sprite/normal/re1a_komaru_a2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/heya1", 400 );
-	PlayBGM( 0, "depressive paranoia", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "depressive paranoia", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\depressive paranoia", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\depressive paranoia", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602470", 128, TRUE);
@@ -2361,7 +2375,9 @@ void main()
 	
 	FadeOutBGM( 0, 1000, FALSE );
 	DrawScene("background/aka2", 1000 );
-	PlayBGM( 1, "yabaisemi", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "yabaisemi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\yabaisemi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\yabaisemi", 120, 0 ); }
 	
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　どうぞ、鬼さん。",
@@ -2443,7 +2459,9 @@ void main()
 	OutputLine(NULL, "　青白い閃光が大空洞を満たした。",
 		   NULL, "A bluish-white flash filled the huge cave.", Line_Normal);
 	ClearMessage();
-	PlaySE( 4, "s_down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "s_down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\s_down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\s_down", 128, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　圭一は人形のように、コテンと可愛らしく倒れる。",
 		   NULL, "Keiichi fell down like a doll.", Line_Normal);
@@ -2592,7 +2610,9 @@ void main()
 	
 	FadeOutBGM( 1, 400, FALSE );
 	DrawScene("black", 400 );
-	PlaySE( 0, "s_jikuu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_jikuu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_jikuu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_jikuu", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100390", 128, TRUE);
@@ -2633,7 +2653,9 @@ void main()
 		   NULL, " ...There's... no way you can be Mion Sonozaki...!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 0, "suzu", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\suzu", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私の手が一瞬止まる。",
@@ -2670,7 +2692,9 @@ void main()
 	ClearMessage();
 	
 	DrawSceneWithMask("black", "maskup", 1, 0, 300 );
-	PlayBGM( 1, "T2", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "T2", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\T2", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\T2", 120, 0 ); }
 	
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602580", 128, TRUE);
@@ -2765,7 +2789,9 @@ void main()
 		   NULL, " I can't accept that...!!\"", Line_Normal);
 	ClearMessage();
 	DrawScene("black", 400 );
-	PlayBGM( 0, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi_r", 120, 0 ); }
 	
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　あは、あはははははははははは…。",
@@ -3007,7 +3033,9 @@ void main()
 	DrawScene("black", 400 );
 	FadeOutBGM( 1, 300, FALSE );
 	DrawSceneWithMask("background/jsa7", "maskdown", 1, 0, 300 );
-	PlayBGM( 1, "msys17", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602593", 128, TRUE);
@@ -3591,11 +3619,15 @@ void main()
 		   NULL, " I knew what it had to be.", Line_Normal);
 	ClearMessage();
 	
-	PlaySE( 4, "s_se149", 108, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "s_se149", 108, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\s_se149", 108, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\s_se149", 108, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……ドォォ…ン…。",
 		   NULL, "......Baang.........", Line_WaitForInput);
-	PlaySE( 4, "s_se149", 118, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "s_se149", 118, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\s_se149", 118, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\s_se149", 118, 64 ); }
 	OutputLine(NULL, "………………ドォォン…。",
 		   NULL, " Baang...", Line_Normal);
 	ClearMessage();
@@ -3718,7 +3750,9 @@ void main()
 		   NULL, " ...You're right.\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 4, "s_se149", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "s_se149", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\s_se149", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\s_se149", 128, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ドォォ…ン！",
 		   NULL, "Baang!", Line_Normal);
@@ -3829,7 +3863,9 @@ void main()
 	OutputLine(NULL, "　これでそこそこの時間が稼げるはずだ。",
 		   NULL, "That should give me some time.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 1, "suzu", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\suzu", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602662", 128, TRUE);
@@ -3998,7 +4034,9 @@ void main()
 		   NULL, "She was in a critical situation.", Line_Normal);
 	ClearMessage();
 	
-	PlayBGM( 0, "kaze", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\kaze", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602679", 128, TRUE);
 	OutputLine(NULL, "「魅音の格好をしたあんたはここから落ちてお陀仏。",
@@ -4060,7 +4098,9 @@ void main()
 		   NULL, " at the bottom of the well...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 4, "s_suzu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\s_suzu", 128, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602689", 128, TRUE);
 	OutputLine(NULL, "「…あん？",
@@ -4164,7 +4204,9 @@ void main()
 	ClearMessage();
 	ModDrawCharacter(2, 17, "sprite/flashback/oryou_shinken_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/flashback/ima3", 1000 );
-	PlayBGM( 0, "msys27", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "msys27", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\msys27", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\msys27", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鬼婆は詩音に言った。",
@@ -4571,7 +4613,9 @@ void main()
 		   NULL, "Did I kill all the wrong people, people who had nothing to do with Satoshi-kun's disappearance at all?", Line_Normal);
 	ClearMessage();
 	DrawSceneWithMask("background/so_chikaido1", "maskup", 1, 0, 300 );
-	PlayBGM( 0, "T2", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "T2", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\T2", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\T2", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150602715", 128, TRUE);
@@ -4668,7 +4712,9 @@ void main()
 		   NULL, "\"Si-.........\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlaySE( 0, "s_furu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_furu", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 300 );
 	SetValidityOfInput( TRUE );

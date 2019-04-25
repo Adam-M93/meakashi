@@ -19,7 +19,9 @@ void main()
 	ClearMessage();
 	ModDrawCharacter(1, 15, "sprite/normal/kasa_1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/si_g1", "maskleft", 1, 0, 300 );
-	PlayBGM( 0, "Nazo", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Nazo", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#76523d>葛西</color>", NULL, "<color=#76523d>Kasai</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 15, "ps3/s06/15/151500185", 128, TRUE);
@@ -296,8 +298,12 @@ void main()
 	DrawSceneWithMask("white", "maskc", 1, 0, 300 );
 	FadeOutBGM( 0, 300, FALSE );
 	DrawSceneWithMask("background/sora", "maskm1", 1, 0, 300 );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 1500 );
 	SetValidityOfInput( TRUE );
@@ -456,7 +462,9 @@ void main()
 	FadeOutBGM( 0, 300, FALSE );
 	FadeOutBGM( 2, 300, FALSE );
 	DrawSceneWithMask("background/ke5", "maskdown", 1, 0, 300 );
-	PlayBGM( 1, "z2_hig1", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "z2_hig1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\z2_hig1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\z2_hig1", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s06/11/150700273", 128, TRUE);
@@ -741,8 +749,12 @@ void main()
 	FadeOutBGM( 1, 400, FALSE );
 	ModDrawCharacter(2, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/ke_ky1", 400 );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s06/11/150700311", 128, TRUE);
@@ -1036,7 +1048,9 @@ void main()
 	FadeOutBGM( 0, 400, FALSE );
 	FadeOutBGM( 2, 400, FALSE );
 	DrawScene("black", 400 );
-	PlaySE( 0, "s_suzu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_suzu", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s06/11/150700342", 128, TRUE);
@@ -1044,7 +1058,9 @@ void main()
 		   NULL, "\"...They say that he was demoned away...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 1, "msys15", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鬼隠しというのは、神隠しと同じ意味だ。",
 		   NULL, "To be demoned away means the same thing as being spirited away.", Line_WaitForInput);
@@ -1151,7 +1167,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 0, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi_r", 120, 0 ); }
 	OutputLine(NULL, "……………あれ？",
 		   NULL, " ......Hmm?", Line_WaitForInput);
 	OutputLine(NULL, "　不快な違和感。",
@@ -1203,7 +1221,9 @@ void main()
 	OutputLine(NULL, "　あの時、……竜宮レナがした薄気味悪い話が脳裏に蘇る。",
 		   NULL, "I remembered the creepy story that she told me at that time.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 1, "kaze", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\kaze", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s06/02/150200064", 128, TRUE);
@@ -1284,8 +1304,12 @@ void main()
 	DrawScene("black", 3000 );
 
 	DrawScene("white", 1400 );
-	PlayBGM( 0, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 	DrawScene("background/sora", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 3500 );
@@ -1322,7 +1346,9 @@ void main()
 	OutputLine(NULL, "　私は腰を下ろすと再びノートを広げ、自分の考えを書き出しながら、沈思黙考の世界に戻った。",
 		   NULL, "I sat down in a new chair, then opened my notebook again. I scribbled my thoughts and sank into silence.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "z2_hig1", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "z2_hig1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\z2_hig1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\z2_hig1", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　雛見沢村連続怪死事件。",
@@ -1898,10 +1924,14 @@ void main()
 
 	ModDrawCharacter(1, 9, "sprite/normal/ta1_warai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/tosyo2", "maskright", 7, 0, 300 );
-	PlaySE( 4, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_027", 128, 64 ); }
 	StartShakingOfWindow( 248, 30, 0, 2, 3*2, FALSE );
 	StartShakingOfAllObjects( 248, 30, 0, 2, 3*2, TRUE );
-	PlayBGM( 1, "higurashi", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\higurashi", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>女性</color>", NULL, "<color=#f5e6d3>Woman</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s06/09/150900001", 128, TRUE);
@@ -2110,7 +2140,9 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(1, 9, "sprite/normal/ta1_akuwarai_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 	FadeOutBGM( 1, 300, FALSE );
-	PlayBGM( 0, "Nazo", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Nazo", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s06/09/150900016", 128, TRUE);
@@ -2764,7 +2796,9 @@ void main()
 		   NULL, "Miyo-san took out a notebook from her bag and flipped through it.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ちらっと見ただけでも、かなり真面目に研究されたものであることがうかがえた。",
@@ -2802,15 +2836,21 @@ void main()
 	OutputLine(NULL, "　三四さんはもったいぶりながらも、私にスクラップ帳を預けてくれた。",
 		   NULL, "Miyo-san handed me the notebook a bit hesitantly.", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 450 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　これを読むだけでも、今夜まるまるとかかりそうだ。",
@@ -2860,7 +2900,9 @@ void main()
 		   NULL, "Miyo-san looked pleased to hear my questions again. She took out another notebook and handed it to me.", Line_Normal);
 	ClearMessage();
 	DrawScene("background/simen3", 400 );
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s06/09/150900068", 128, TRUE);
@@ -2892,7 +2934,9 @@ void main()
 	ModPlayVoiceLS(4, 9, "ps3/s06/09/150900072", 128, TRUE);
 	OutputLine(NULL, "「そうね。",
 		   NULL, "\"That's right.", Line_WaitForInput);
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 
 	ModPlayVoiceLS(4, 9, "ps3/s06/09/150900073", 128, TRUE);
 	OutputLine(NULL, "でね、オヤシロさまの祟りというのは、放置してはいけないの。",
@@ -2924,7 +2968,9 @@ void main()
 	OutputLine(NULL, "生贄に捧げられたなんて聞いたこともない…！」",
 		   NULL, "I've never heard of human sacrifices being made!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s06/09/150900077", 128, TRUE);
@@ -3020,7 +3066,9 @@ void main()
 	
 	FadeOutBGM( 0, 300, FALSE );
 	DrawSceneWithMask("background/tosyo2", "maskleft", 1, 0, 300 );
-	PlayBGM( 0, "higurashi", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\higurashi", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　突然、そこで男の人の声が聞こえた。",
@@ -3083,7 +3131,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　雛見沢村連続怪死事件。",
@@ -3125,7 +3175,9 @@ void main()
 	OutputLine(NULL, "　私は今度こそ、誰にも覗きこまれないようにしながら、慎重にノートのページをめくり始めるのだった…………。",
 		   NULL, "I started flipping the pages, this time making sure that no one was watching over my shoulder......", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "s_page", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_page", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_page", 128, 64 ); }
 	DrawSceneWithMask("black", "maskright", 7, 0, 3000 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );

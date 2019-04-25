@@ -7,7 +7,9 @@ void main()
 	FadeOutBGM( 3, 0, FALSE );
 	ClearMessage();
 	DrawSceneWithMask("white", "maskc", 1, 0, 300 );
-	PlayBGM( 0, "z2_hig3", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "z2_hig3", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\z2_hig3", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\z2_hig3", 120, 0 ); }
 	DrawScene("background/sora", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -65,7 +67,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
 
@@ -75,8 +79,12 @@ void main()
 	ClearMessage();
 	
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 1, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150600309", 128, TRUE);
@@ -89,7 +97,9 @@ void main()
 	OutputLine(NULL, "　何、こんなとこに停めてるの誰ー？！」",
 		   NULL, " Who parked this motorcycle here?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlaySE( 0, "s_tataku", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_tataku", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　上機嫌な私はノーウェイトで、その邪魔っけなバイクに蹴りをくれてやった。",
@@ -100,15 +110,21 @@ void main()
 	OutputLine(NULL, "　バイクは３台。",
 		   NULL, "There were three motorcycles lined up there in a row.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それらはドミノ倒しのように、バタバタンと倒れていった。",
@@ -134,7 +150,9 @@ void main()
 	FadeOutBGM( 1, 300, FALSE );
 	FadeOutBGM( 2, 300, FALSE );
 	DrawSceneWithMask("black", "maskright", 1, 0, 300 );
-	PlayBGM( 0, "deadend", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "deadend", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\deadend", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\deadend", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　バイクを蹴り倒して意気揚々と立ち去ろうとする私の襟首を掴んで、薄暗い路地裏に引きずり込む。",
@@ -152,7 +170,9 @@ void main()
 		   NULL, "Everything was happening too quickly for me to grasp what was going on...", Line_Normal);
 	ClearMessage();
 	DrawScene("background/mati4", 400 );
-	PlaySE( 0, "s_daidageki", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_daidageki", 128, 64 ); }
 	StartShakingOfWindow( 248, 40, 0, 0, 3*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 0, 3*2, TRUE );
 
@@ -222,7 +242,9 @@ void main()
 	OutputLine(NULL, "ってな感じだと思う。",
 		   NULL, " Something like that?", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "wa_018", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_018", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_018", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_018", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>不良</color>", NULL, "<color=#f5e6d3>Delinquent</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s06/00/huryoa15002", 128, TRUE);
@@ -343,7 +365,9 @@ void main()
 		   NULL, "...Considering that, taking me to this narrow, secluded alleyway might've been a smart move, since fewer people will find out about this situation.", Line_Normal);
 	ClearMessage();
 	DrawScene("background/mati4", 0 );
-	PlaySE( 0, "s_daidageki", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_daidageki", 128, 64 ); }
 	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
 
@@ -365,7 +389,9 @@ void main()
 	OutputLine(NULL, "　まずは相手が私だということ。",
 		   NULL, "From the very beginning, they had picked the wrong girl.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Kyupiin", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今、ここにいる私は「園崎魅音」なのだ。",
@@ -635,7 +661,9 @@ void main()
 		   NULL, "A boy around my age appeared.", Line_Normal);
 	ClearMessage();
 	
-	PlayBGM( 0, "T1", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "T1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\T1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\T1", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　体つきは細く、男としては華奢に見える。",
@@ -780,33 +808,47 @@ void main()
 		   NULL, "So, they resorted to violence.", Line_Normal);
 	ClearMessage();
 	DrawScene("black", 400 );
-	PlaySE( 0, "s_furu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_furu", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 300 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 300 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 300 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_furu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_furu", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 400 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_003", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_003", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　三人組は、彼に掴みかかり、殴って、蹴って、投げ飛ばしたりした。",
 		   NULL, "They grabbed him and knocked him down. They hit, kicked, and tossed him around.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 150 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_tataku", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_tataku", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_tataku", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…それはもちろん、彼にとって苦痛を伴うものだったが、全部見ていた私だけはわかっていた。",
@@ -823,8 +865,12 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "semi", 120, 0 );
-	PlayBGM( 2, "suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\suzume", 120, 0 ); }
 	DrawScene("background/mati4", 3000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1349,7 +1395,9 @@ void main()
 	DrawScene("black", 2000 );
 	Wait( 1000 );
 	DrawScene("white", 400 );
-	PlayBGM( 0, "Iru", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Iru", 120, 0 ); }
 	DrawSceneWithMask("background/si_h2_01", "maskup", 1, 0, 300 );
 	SetSpeedOfMessage( FALSE, 0 );
 
@@ -1465,7 +1513,9 @@ void main()
 	
 	FadeOutBGM( 0, 300, FALSE );
 	DrawScene("background/si_h2_01", 300 );
-	PlayBGM( 0, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\yoru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s06/03/150300112", 128, TRUE);
@@ -1497,7 +1547,9 @@ void main()
 	DrawScene("white", 400 );
 	FadeOutBGM( 0, 300, FALSE );
 	DrawSceneWithMask("background/flashback/ho1", "maskc", 1, 0, 300 );
-	PlayBGM( 0, "demo_48khz", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "demo_48khz", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\demo_48khz", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\demo_48khz", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　お姉から聞かされた話は興味深かった。",

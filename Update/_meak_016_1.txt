@@ -8,7 +8,9 @@ void main()
 
 	DrawScene("black", 1000 );
 	DrawSceneWithMask("background/si_h6", "maskc", 1, 0, 3000 );
-	PlayBGM( 0, "Soul_scour", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Soul_scour", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Soul_scour", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Soul_scour", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…寝るのが怖かった。",
@@ -99,7 +101,9 @@ void main()
 	SetValidityOfInput( TRUE );
 	FadeOutBGM( 0, 1000, FALSE );
 	DrawScene("white", 1000 );
-	PlayBGM( 2, "Suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "Suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\Suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\Suzume", 120, 0 ); }
 	DrawSceneWithMask("background/si_h2", "maskm1", 1, 0, 3000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -133,7 +137,9 @@ void main()
 		   NULL, "...Just when I'd resigned myself to that...", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 	FadeOutBGM( 2, 300, FALSE );
-	PlayBGM( 0, "T1", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "T1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\T1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\T1", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…悟史くんがまた居てくれているのを感じ、……私は悟史くんとの再会が夢でなかったことを神様に感謝した。",
@@ -343,7 +349,9 @@ void main()
 	FadeOutBGM( 0, 1000, FALSE );
 	DrawScene("black", 3000 );
 	DrawScene("white", 1000 );
-	PlayBGM( 0, "Iru", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Iru", 120, 0 ); }
 	ModDrawCharacter(2, 15, "sprite/normal/kasa_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/si_g1", "maskright", 1, 0, 400 );
 

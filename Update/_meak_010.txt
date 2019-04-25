@@ -9,7 +9,9 @@ void main()
 	DrawScene("black", 300 );
 	SetStyleOfMessageSwinging( 2 );
 	SetSpeedOfMessage( TRUE, 0 );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 5 ); }
 
 
@@ -22,7 +24,9 @@ void main()
 	
 	DisableWindow();
 	Wait( 2000 );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 7 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -35,7 +39,9 @@ void main()
 	ClearMessage();
 	SetSpeedOfMessage( FALSE, 0 );
 	DrawScene("background/si_h2", 400 );
-	PlayBGM( 0, "Nazo", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Nazo", 120, 0 ); }
 	SetStyleOfMessageSwinging( 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -114,7 +120,9 @@ void main()
 	DrawScene("background/ho1", 400 );
 	SetStyleOfMessageSwinging( 2 );
 	SetSpeedOfMessage( TRUE, 0 );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 6 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -449,7 +457,9 @@ void main()
 		   NULL, "..................The relationship between Satoko and her aunt had already spiraled out of control.", Line_Normal);
 	ClearMessage();
 	DrawSceneWithMask("background/mo_g1_01", "maskup", 1, 0, 300 );
-	PlayBGM( 1, "higurashi", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\higurashi", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\higurashi", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　粗大ゴミ置き場が目に留まった。",
@@ -504,7 +514,9 @@ void main()
 	OutputLine(NULL, "必ず運ぶ前に開ける。",
 		   NULL, " so she'd always open them to check before carrying the thing home.", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "s_door", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_door", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_door", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_door", 128, 64 ); }
 	DrawSceneWithMask("black", "maskleft", 7, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -527,7 +539,9 @@ void main()
 		   NULL, "He was standing in a knee-high bush.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 0, "wa_003", 100, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_003", 100, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_003", 100, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_003", 100, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　彼は、今日まで肌身離さずに持っていたソレを、茂みに横たえる。",
 		   NULL, "There he laid something he'd been carrying all the time, until today.", Line_Normal);
@@ -548,7 +562,9 @@ void main()
 	FadeOutBGM( 1, 1000, TRUE );
 	SetStyleOfMessageSwinging( 2 );
 	SetSpeedOfMessage( TRUE, 0 );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 6 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1012,7 +1028,9 @@ void main()
 	ClearMessage();
 	
 	DrawScene("black", 400 );
-	PlaySE( 0, "s_suzu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_suzu", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s06/05/150500022", 128, TRUE);
@@ -1024,7 +1042,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 6 ); }
 
 	SetStyleOfMessageSwinging( 2 );
@@ -1040,7 +1060,9 @@ void main()
 	SetSpeedOfMessage( FALSE, 0 );
 	SetStyleOfMessageSwinging( 0 );
 	DrawSceneWithMask("background/ho1_01", "maskup", 1, 0, 300 );
-	PlayBGM( 1, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\yoru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　悟史は夕食後、こっそり窓から外に出た。",
@@ -1182,7 +1204,9 @@ void main()
 	
 	FadeOutBGM( 1, 400, FALSE );
 	DrawScene("black", 400 );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 6 ); }
 
 	SetStyleOfMessageSwinging( 2 );
@@ -1411,7 +1435,9 @@ void main()
 		   NULL, " it's just another hassle...\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 0, "s_suzu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_suzu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_suzu", 128, 64 ); }
 	
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f3ceb3>喜一郎</color>", NULL, "<color=#f3ceb3>Kiichiro</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 18, "ps3/s06/18/153300014", 128, TRUE);
@@ -1465,7 +1491,9 @@ void main()
 	
 	DrawScene("black", 400 );
 	Wait( 1000 );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 6 ); }
 
 	SetStyleOfMessageSwinging( 2 );
@@ -1483,7 +1511,9 @@ void main()
 	ModDrawCharacter(1, 11, "sprite/night/oisi1_1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacter(3, 19, "sprite/night/kuma_komaru_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/ymo1", 1000 );
-	PlayBGM( 1, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\yoru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 19, "ps3/s06/19/153100001", 128, TRUE);
@@ -1635,35 +1665,51 @@ void main()
 	ClearMessage();
 	DrawScene("black", 400 );
 	FadeOutBGM( 1, 300, FALSE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 250 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 150 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 700 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 100 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 150 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "wa_013", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_013", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_013", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鑑識の人間たちがいろいろな角度からソレを撮影していた。",
@@ -1702,7 +1748,9 @@ void main()
 	ClearMessage();
 	
 	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 300 );
-	PlayBGM( 1, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi_r", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ソレは、……ごろんと仰向けになった、中年女性？の、…血塗れの死体だった。",
@@ -2018,7 +2066,9 @@ void main()
 	
 	DrawScene("black", 400 );
 	Wait( 1000 );
-	PlayBGM( 1, "taip", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\taip", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\taip", 120, 0 ); }
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 1, 6 ); }
 
 	SetStyleOfMessageSwinging( 2 );

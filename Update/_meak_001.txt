@@ -17,7 +17,9 @@ void main()
 	DrawScene("black", 3000 );
 	SetSpeedOfMessage( FALSE, 0 );
 
-	PlayBGM( 1, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\yoru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…キーホルダーに括り付けられたカギは大小７つ。",
@@ -119,7 +121,9 @@ void main()
 	OutputLine(NULL, "　私の目の前に突きつけられた現実は、どのカギも外れであるという致命的なものだった。",
 		   NULL, "What happened was worse than my worst-case scenario... None of the keys worked at all.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 1, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi_r", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　全身から、ザーーっという音を立てて血の気が引いていくのが分かる。",
@@ -255,7 +259,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "kaze", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\kaze", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\kaze", 120, 0 ); }
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -413,7 +419,9 @@ void main()
 	OutputLine(NULL, "…ってことはつまり、安全ってこと？",
 		   NULL, " So... am I safe?", Line_Normal);
 	ClearMessage();
-	PlayBGM( 1, "suzu", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\suzu", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　落ち着け…落ち着け落ち着け…。",
@@ -471,7 +479,9 @@ void main()
 		   NULL, " This isn't a prison or a detention center.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 0, "Iru", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Iru", 120, 0 ); }
 	DrawScene("background/ga1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -916,7 +926,9 @@ void main()
 	
 	FadeOutBGM( 0, 500, FALSE );
 	DrawScene("black", 300 );
-	PlayBGM( 1, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\yoru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そして、Ｘデーの夜が訪れた。",
@@ -951,7 +963,9 @@ void main()
 		   NULL, "But that's enough for me......!", Line_Normal);
 	ClearMessage();
 	DrawSceneWithMask("black", "maskright", 7, 0, 300 );
-	PlayBGM( 1, "suzu", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\suzu", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\suzu", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　いつもの決められた順路を一歩離れる。",
@@ -1023,7 +1037,9 @@ void main()
 	ClearMessage();
 	FadeOutBGM( 1, 500, FALSE );
 	DrawSceneWithMask("background/moon", "maskleft", 1, 0, 300 );
-	PlayBGM( 0, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\yoru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　扉を少し開く。",
@@ -1103,7 +1119,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 0, 500, FALSE );
 	Negative( 1000 , TRUE );
-	PlayBGM( 1, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi_r", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…この学校にまつわる怪談には、いつも脱走未遂の生徒が絡むからだ。",
@@ -1113,7 +1131,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 500, FALSE );
 	FadeFilm( 500, TRUE );
-	PlayBGM( 0, "DEADEND", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "DEADEND", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\DEADEND", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\DEADEND", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……くそったれ…、上等じゃないの…。",
@@ -1141,7 +1161,9 @@ void main()
 		   NULL, "I psyched myself up and... pushed the door open.", Line_Normal);
 	ClearMessage();
 	
-	PlaySE( 0, "s_M_Door8k", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_M_Door8k", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_M_Door8k", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_M_Door8k", 128, 64 ); }
 	DrawSceneWithMask("black", "maskc", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1542,7 +1564,9 @@ void main()
 	OutputLine(NULL, "　私は臆すことなく、その高さから飛び降りることを選ぶ。",
 		   NULL, "I chose to jump off with no hesitation.", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "furu", 100, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "furu", 100, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\furu", 100, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\furu", 100, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　もちろん、自由落下に身を任せてから少しは後悔した。",
@@ -1555,7 +1579,9 @@ void main()
 	ClearMessage();
 	DrawScene("white", 50 );
 	DrawScene("background/ga1", 0 );
-	PlaySE( 0, "wa_003", 100, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_003", 100, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_003", 100, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_003", 100, 64 ); }
 	StartShakingOfWindow( 248, 30, 0, 2, 12, FALSE );
 	StartShakingOfAllObjects( 248, 30, 0, 2, 12, TRUE );
 
@@ -1655,7 +1681,9 @@ void main()
 	CallScript( "&eye" );
 	FadeOutBGM( 0, 500, TRUE );
 
-	PlayBGM( 0, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\yoru", 120, 0 ); }
 	DrawScene("background/ga1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1680,7 +1708,9 @@ void main()
 	OutputLine(NULL, "そんなことは全然なかった。",
 		   NULL, " but it didn't happen.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "Iru", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Iru", 120, 0 ); }
 	DrawScene("background/moon", 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1717,7 +1747,9 @@ void main()
 	ClearMessage();
 	FadeOutBGM( 0, 2000, FALSE );
 	DrawScene("black", 2000 );
-	PlayBGM( 0, "yoru", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\yoru", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\yoru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……やがて、車が近付いてくる音がした。",
@@ -1809,7 +1841,9 @@ void main()
 	
 	FadeOutBGM( 0, 300, FALSE );
 	DrawScene("black", 400 );
-	PlayBGM( 0, "Cafe", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Cafe", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　葛西は苦笑いを隠そうともせずに、げらげらと笑うと、私にシートベルトを促してから、一気に車を加速させた。",
@@ -1846,7 +1880,9 @@ void main()
 		   NULL, " Serves you right!", Line_Normal);
 	ClearMessage();
 	DrawScene("background/kuruma4", 1000 );
-	PlayBGM( 1, "Mati", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Mati", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　欧州の一角なのでは…と勘違いさせられかねないお洒落な雰囲気は、",
@@ -2297,7 +2333,9 @@ void main()
 	
 	FadeOutBGM( 1, 500, FALSE );
 	DrawScene("background/flashback/mati2", 400 );
-	PlayBGM( 0, "Iru", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Iru", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Iru", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　もっともあの頃の生活を、平凡と言っていいかはわからない。",
@@ -2501,7 +2539,9 @@ void main()
 	FadeOutBGM( 0, 300, FALSE );
 	DrawScene("white", 50 );
 	DrawScene("background/kuruma5_02", 0 );
-	PlayBGM( 1, "Mati", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Mati", 120, 0 ); }
 	StartShakingOfWindow( 245, 60, 0, 2, 3*2, FALSE );
 	StartShakingOfAllObjects( 245, 60, 0, 2, 3*2, TRUE );
 
@@ -2603,7 +2643,9 @@ void main()
 	FadeOutBGM( 1, 500, FALSE );
 	DrawScene("black", 400 );
 	DrawScene("background/flashback/ima3", 400 );
-	PlayBGM( 1, "msys27", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys27", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys27", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys27", 128, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私に与えられた名前は",
@@ -2831,7 +2873,9 @@ void main()
 	ClearMessage();
 	
 	FadeOutBGM( 1, 300, FALSE );
-	PlayBGM( 0, "Mati", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\Mati", 120, 0 ); }
 	DrawSceneWithMask("background/kuruma5_02", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#76523d>葛西</color>", NULL, "<color=#76523d>Kasai</color>", NULL, Line_ContinueAfterTyping); }
@@ -2929,7 +2973,9 @@ void main()
 	OutputLine(NULL, "　自分がその噂を、被験者として確かめる目に遭わないことを祈っておこう。",
 		   NULL, "I hope I don't end up as a victim of that place.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 1, "Cafe", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\Cafe", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150600053", 128, TRUE);
@@ -3305,7 +3351,9 @@ void main()
 	FadeOutBGM( 0, 500, FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 0, "T1", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "T1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\T1", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\T1", 120, 0 ); }
 	SetValidityOfInput( FALSE );
 	DrawScene("prologue/mea_t1", 1000 );
 	Wait( 7000 );

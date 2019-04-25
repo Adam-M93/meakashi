@@ -7,13 +7,17 @@ void main()
 	ClearMessage();
 
 
-	PlaySE( 0, "wa_001", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_001", 128, 64 ); }
 	Wait( 2000 );
 
 	SetValidityOfInput( TRUE );
 	ModDrawCharacter(2, 1, "sprite/normal/kei1_def2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/gk1", 400 );
-	PlayBGM( 0, "03_cele", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "03_cele", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\03_cele", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\03_cele", 120, 0 ); }
 	SetSpeedOfMessage( FALSE, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -316,15 +320,21 @@ void main()
 	Wait( 6000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask("omake_haikei", "mask4", 1, 0, 1500 );
-	PlaySE( 0, "s_jikuu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_jikuu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_jikuu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_jikuu", 128, 64 ); }
 	DrawSceneWithMask("omake_jamp", "mask5", 1, 0, 1500 );
 	Wait( 10000 );
 	DrawSceneWithMask("omake_haikei", "mask4", 1, 0, 1500 );
-	PlaySE( 0, "s_jikuu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_jikuu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_jikuu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_jikuu", 128, 64 ); }
 	DrawSceneWithMask("omake_tip", "mask5", 1, 0, 1500 );
 	Wait( 10000 );
 	DrawSceneWithMask("omake_haikei", "mask4", 1, 0, 1500 );
-	PlaySE( 0, "s_boyoon", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_boyoon", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_boyoon", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_boyoon", 128, 64 ); }
 	DrawSceneWithMask("omake_staff", "mask5", 1, 0, 1500 );
 	Wait( 10000 );
 	DrawScene("black", 1000 );

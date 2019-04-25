@@ -10,7 +10,9 @@ void main()
 	Wait( 5000 );
 	DrawScene("text/57b", 1000 );
 	Wait( 8000 );
-	PlayBGM( 1, "Suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Suzume", 120, 0 ); }
 	DrawSceneWithMask("white", "maskm1", 1, 0, 1300 );
 	DrawScene("background/si_h2", 1000 );
 	SetSpeedOfMessage( FALSE, 0 );
@@ -96,7 +98,9 @@ void main()
 	ClearMessage();
 	FadeOutBGM( 1, 300, FALSE );
 	DrawSceneWithMask("black", "maskleft", 1, 0, 300 );
-	PlayBGM( 0, "z2_hig3", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "z2_hig3", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\z2_hig3", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\z2_hig3", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ここは興宮の外れにある、この辺じゃかなり立派な部類に入る高層マンションで、",
@@ -307,7 +311,9 @@ void main()
 		   NULL, "It's funny to me that we're calling the main house, even though that's the place I most want to avoid at the moment.", Line_Normal);
 	ClearMessage();
 	DrawSceneWithMask("black", "maskleft", 1, 0, 300 );
-	PlayBGM( 1, "M_Denwa8k", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "M_Denwa8k", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\M_Denwa8k", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\M_Denwa8k", 120, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2500 );
 	SetValidityOfInput( TRUE );
@@ -356,13 +362,17 @@ void main()
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150600088", 128, TRUE);
 	OutputLine(NULL, "　………くっくっくっく！",
 		   NULL, " ......Heh heh heh heh!", Line_WaitForInput);
-	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Kyupiin", 128, 64 ); }
 
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150600089", 128, TRUE);
 	OutputLine(NULL, "　私が誰だかわかります？」",
 		   NULL, " Can you tell who this is?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlayBGM( 0, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi_r", 120, 0 ); }
 
 	//VoiceMatching
 	if(GetGlobalFlag(GCensor) >= 2){ModCallScriptSection("_zmeak_002_vm0x_n01","dialog000");}
@@ -445,7 +455,9 @@ void main()
 	OutputLine(NULL, "　私にとってここが限界なら、それは魅音にとっても限界だった。",
 		   NULL, "That was as far as I could take it, and Mion had hit her limit too.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "mion", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "mion", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\mion", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\mion", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>＆<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Mion</color> & <color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s06/03/150300009", 128, TRUE);
@@ -538,7 +550,9 @@ void main()
 	DrawSceneWithMask("white", "maskleft", 1, 0, 300 );
 	FadeOutBGM( 0, 300, FALSE );
 	DrawSceneWithMask("background/sora", "maskleft", 1, 0, 300 );
-	PlayBGM( 0, "Cafe", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Cafe", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150600104", 128, TRUE);
@@ -743,7 +757,9 @@ void main()
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150600126", 128, TRUE);
 	OutputLine(NULL, "「何ですか、お姉。",
 		   NULL, "\"What are you saying, Sis?", Line_WaitForInput);
-	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Kyupiin", 128, 64 ); }
 
 	ModPlayVoiceLS(4, 6, "ps3/s06/06/150600127", 128, TRUE);
 	OutputLine(NULL, "双子の妹の頼みを断る？",
@@ -777,7 +793,9 @@ void main()
 		   NULL, " I'll throw in tons of pretty tarts too!\"", Line_Normal);
 	ClearMessage();
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 1, "Suzume", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Suzume", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Suzume", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s06/03/150300040", 128, TRUE);
@@ -1069,7 +1087,9 @@ void main()
 	DrawScene("black", 1000 );
 	DrawSceneWithMask("background/res5", "maskdown", 1, 0, 1300 );
 
-	PlayBGM( 0, "Cafe", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Cafe", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Cafe", 120, 0 ); }
 	SetSpeedOfMessage( FALSE, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>義郎</color>", NULL, "<color=#f5e6d3>Yoshiroh</color>", NULL, Line_ContinueAfterTyping); }
@@ -1272,7 +1292,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 800 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_boyoon", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_boyoon", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_boyoon", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_boyoon", 128, 64 ); }
 
 	OutputLine(NULL, "全寮制のお嬢様学校というのはどんなところだ？！",
 		   NULL, " \"What was it like in a prestigious girls' boarding school?!\"", GetGlobalFlag(GLinemodeSp));
@@ -1391,7 +1413,9 @@ void main()
 		   NULL, "Uncle Yoshiroh seemed exasperated at how differently kids and adults treated the conflict.", Line_Normal);
 	ClearMessage();
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 1, "Mati", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\Mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\Mati", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps2/06/150600178", 240, TRUE);
@@ -1469,7 +1493,9 @@ void main()
 	DrawSceneWithMask("black", "maskdown", 1, 0, 300 );
 	FadeOutBGM( 1, 300, FALSE );
 	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 400 );
-	PlayBGM( 1, "msys09", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys09", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys09", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys09", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　嫌われ者だったダム現場の現場監督が、綿流しの祭の夜に、殺されて遺体をバラバラにされた。",
@@ -1652,7 +1678,9 @@ void main()
 	
 	FadeOutBGM( 1, 300, FALSE );
 	DrawSceneWithMask("background/res5", "maskup", 1, 0, 300 );
-	PlayBGM( 0, "mati", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\mati", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\mati", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>義郎</color>", NULL, "<color=#f5e6d3>Yoshiroh</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s06/00/152900027", 128, TRUE);
@@ -1678,7 +1706,9 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "知らないの？」",
 		   NULL, " Don't you know?\"", Line_Continue);
-	PlaySE( 0, "s_Z01_Iwakan", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Z01_Iwakan", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Z01_Iwakan", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Z01_Iwakan", 128, 64 ); }
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -1763,7 +1793,9 @@ void main()
 		   NULL, " ...What are you talking about?\"", Line_Normal);
 	ClearMessage();
 	DrawScene("black", 1000 );
-	PlayBGM( 0, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\semi_r", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ちくり。",
@@ -1820,7 +1852,9 @@ void main()
 	
 	FadeOutBGM( 0, 300, FALSE );
 	DrawScene("background/res4", 400 );
-	PlayBGM( 0, "getting_mad", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "getting_mad", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\getting_mad", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\getting_mad", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>義郎</color>", NULL, "<color=#f5e6d3>Yoshiroh</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s06/00/152900037", 128, TRUE);

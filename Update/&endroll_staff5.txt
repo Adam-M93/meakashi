@@ -1,6 +1,8 @@
 void main()
 {
-	PlayBGM( 0, "song_you", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "song_you", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\song_you", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\song_you", 120, 0 ); }
 	DrawScene("white", 5000 );
 	DrawScene("black", 2000 );
 	Wait( 2000 );

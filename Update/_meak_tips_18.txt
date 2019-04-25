@@ -8,7 +8,9 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask("background/jy1", "maskup", 1, 0, 1300 );
-	PlayBGM( 0, "Nazo", 120, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 0, "Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 0, "Original\Nazo", 120, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 0, "April2019Update\Nazo", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その後、私は公由村長の行方を捜す青年団に合流した。",
@@ -113,7 +115,9 @@ void main()
 	OutputLine(NULL, "　公由を捜すためにはこれだけの時間を割くのに、…悟史くんにはまったく割かない。",
 		   NULL, "Although they spent this much time searching for Kimiyoshi... they didn't do the same when Satoshi-kun went missing.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 1, "semi_r", 120, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\semi_r", 120, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\semi_r", 120, 0 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そう、絶対見つからないと知っているやつらが、居たからだ。",
