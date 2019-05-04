@@ -83,7 +83,9 @@ void dialog003()
 		   NULL, " No matter what!!", GetGlobalFlag(GLinemodeSp));
 	
 	DisableWindow();
-	PlaySE( 0, "s_daidageki", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_daidageki", 128, 64 ); }
 	DrawScene("background/furiker_b", 100 );
 	StartShakingOfWindow( 248, 40, 0, 0, 4*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 0, 4*2, TRUE );
@@ -96,7 +98,9 @@ void dialog003()
 		   NULL, "That is the ironclad rule!!!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Kyupiin", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Kyupiin", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100020", 128, TRUE);
@@ -105,7 +109,9 @@ void dialog003()
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100021", 128, TRUE);
 	OutputLine(NULL, "ホモサピエンスと動物の違いは何か。",
 		   NULL, " What's the difference between homo sapiens and other animals?", Line_WaitForInput);
-	PlaySE( 0, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_011", 128, 64 ); }
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100022", 128, TRUE);
 	OutputLine(NULL, "そう、衣服の着用だ。",
 		   NULL, " That's right, humans wear clothes!", Line_WaitForInput);
@@ -113,7 +119,9 @@ void dialog003()
 	OutputLine(NULL, "つまりヒトは衣服があって初めてヒトなのだ！！！",
 		   NULL, " Human beings without clothes are just animals!!!", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-	PlaySE( 0, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_007", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100024", 128, TRUE);
@@ -137,7 +145,9 @@ void dialog004()
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100028", 128, TRUE);
 	OutputLine(NULL, "「先ほどタイトミニを引き合いに出したな。",
 		   NULL, "\"You mentioned tight miniskirts, didn't you?", Line_WaitForInput);
-	PlaySE( 0, "wa_012", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_012", 128, 64 ); }
 
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100029", 128, TRUE);
 	OutputLine(NULL, "例えばここに美少女と呼ぶにふさわしい女の子がいたとする。",
@@ -207,7 +217,9 @@ void dialog006()
 		   NULL, " Say 'yessir' when you got it!!!", GetGlobalFlag(GLinemodeSp));
 
 	DisableWindow();
-	PlaySE( 0, "s_daidageki", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_daidageki", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_daidageki", 128, 64 ); }
 	DrawScene("background/furiker_a", 100 );
 	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
@@ -223,12 +235,16 @@ void dialog006()
 	OutputLine(NULL, "　よおし描けたようだな次に進むぞ。",
 		   NULL, "Good, you all seem to have an image in your heads now. Let's move on.", Line_Normal);
 	ClearMessage();
-	PlaySE( 0, "wa_012", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_012", 128, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100048", 128, TRUE);
 	OutputLine(NULL, "　それらの萌え衣装と、貴様らの馬鹿げた欲情に従いお色気ムンムンなタイトミニスカート姿を見比べてみろ！",
 		   NULL, "Now just imagine and compare your moe-costume with that erotic outfit with the tight miniskirt your stupid desires conjured up!", GetGlobalFlag(GLinemodeSp));
-	PlaySE( 0, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_007", 128, 64 ); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s06/01/150100049", 128, TRUE);
 	OutputLine(NULL, "どうだ！！　明らかに合わないだろう！！！",
@@ -240,7 +256,9 @@ void dialog006()
 		   NULL, "Sexy and moe are on completely different vectors - they're like water and oil!!!", GetGlobalFlag(GLinemodeSp));
 
 	DisableWindow();
-	PlaySE( 0, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_006", 128, 64 ); }
 	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
 	
@@ -255,7 +273,9 @@ void dialog006()
 		   NULL, " Sexiness is instinctual, but moe comes from a world of delicate and rustic sensibilities!!", GetGlobalFlag(GLinemodeSp));
 	
 	DisableWindow();
-	PlaySE( 0, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_005", 128, 64 ); }
 	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
 	
@@ -273,11 +293,15 @@ void dialog007()
 		   NULL, "Incidentally, a huge amount of varied 'moe' is going around lately thanks to the recent thawing of East-West relations.", GetGlobalFlag(GLinemodeSp));
 	
 	DisableWindow();
-	PlaySE( 0, "s_furu", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_furu", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_furu", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\s_Down", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\s_Down", 128, 64 ); }
 	StartShakingOfWindow( 248, 40, 0, 0, 3*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 0, 3*2, TRUE );
 	
@@ -308,7 +332,9 @@ void dialog008()
 		   NULL, " You pathetic squid!!!", GetGlobalFlag(GLinemodeSp));
 
 	DisableWindow();
-	PlaySE( 0, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 0, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 0, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 0, "April2019Update\wa_005", 128, 64 ); }
 	StartShakingOfWindow( 248, 40, 0, 0, 2*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 0, 2*2, TRUE );
 	
